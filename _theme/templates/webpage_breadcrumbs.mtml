@@ -1,0 +1,30 @@
+<nav role="navigation">
+  <ul class="breadcrumbs">
+    <li class="home"><a href="<$mt:BlogRelativeURL$>"><i class="fa fa-home fa-lg"></i></a></li>
+    <mt:If name="this_folder">
+    <li class="has-dropdown">
+      <a data-dropdown="bc-<$mt:FolderBasename$>" aria-controls="bc-<$mt:FolderBasename$>" aria-expanded="false"><mt:TopLevelFolder><$mt:FolderLabel$> </mt:TopLevelFolder> <i class="fa fa-caret-down fa-sm"></i></a>
+      <ul id="bc-<$mt:FolderBasename$>" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+        <mt:Pages field:navi_on="1" folder="$this_folder" sort_order="ascend">
+        <mt:SetVarBlock name="page_title"><$mt:PageTitle$></mt:SetVarBlock>
+        <li><a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a></li>
+        </mt:Pages>
+        <mt:TopLevelFolder>
+          <mt:SubFolders>
+          <li class="sub-folder">
+          <ul id="<$mt:FolderBasename$>" class="bread-open" tabindex="-1">
+          <li class="folder-label"><$mt:FolderLabel$> <i class="fa fa-caret-down fa-sm"></i></li>
+          <mt:Pages field:navi_on="1" sort_order="ascend">
+            <li<mt:If name="this_page" eq="$page_title"> class="active"</mt:If>><a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a></li>
+          </mt:Pages>
+          </ul>
+          </li>
+        <$mt:SubFolderRecurse$>
+          </mt:SubFolders>
+      </mt:TopLevelFolder>
+      </ul>
+    </li>
+    </mt:If>
+    <li><span><$mt:PageTitle$></span></li>
+  </ul>
+</nav>

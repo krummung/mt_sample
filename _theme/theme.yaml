@@ -1,0 +1,258 @@
+id: "mt_sample"
+label: "mt_sample"
+version: "1.0.0"
+author_link: "https://actvision.movabletype.io/"
+author_name: "sample site"
+description: "mt_sample"
+class: "blog"
+elements:
+  blog_static_files:
+    component: ~
+    data:
+      - css
+      - images
+      - js
+    importer: blog_static_files
+  custom_fields:
+    component: commercial
+    data:
+      entry_pickup:
+        default: 0
+        description: メインページ中央のPICKUP オススメ部分に表示する場合にチェックを入れます。
+        name: ピックアップ
+        obj_type: post
+        options: ''
+        required: 0
+        type: checkbox
+      footernavi_on:
+        default: 0
+        description: フッターメニューに表示する場合にチェックを入れます。
+        name: フッターメニューに表示
+        obj_type: page
+        options: ''
+        required: 0
+        type: checkbox
+      imageposition:
+        default: ''
+        description: ''
+        name: メインイメージの配置
+        obj_type: page
+        options: 上に配置,下に配置,背景全体に配置
+        required: 0
+        type: radio
+      logo_images:
+        default: ''
+        description: メインイメージ上に表示されるタイトルロゴの画像をアップロードします。
+        name: ロゴ画像
+        obj_type: blog
+        options: ''
+        required: 0
+        type: asset_image
+      main_image_entry:
+        default: ''
+        description: 記事のサムネイルやog:imageとして表示させる画像です。
+        name: メインイメージ
+        obj_type: post
+        options: ''
+        required: 0
+        type: asset_image
+      main_image_page:
+        default: ''
+        description: ウェブページのサムネイルやog:imageとして表示させる画像です。
+        name: メインイメージ（ウェブページ）
+        obj_type: page
+        options: ''
+        required: 0
+        type: asset_image
+      main_images:
+        default: ''
+        description: "背景になる画像をアップロードします。\r\n全面に表示されるため、大きなサイズの画像がオススメです。"
+        name: メインイメージ
+        obj_type: blog
+        options: ''
+        required: 0
+        type: asset_image
+      navi_on:
+        default: 0
+        description: グローバルナビに表示する場合にチェックを入れます。
+        name: グローバルナビに表示
+        obj_type: page
+        options: ''
+        required: 0
+        type: checkbox
+      pageimage:
+        default: ''
+        description: メインイメージの各ブロックに表示する画像です。（横幅は1280px程度を推奨）
+        name: メインイメージ
+        obj_type: page
+        options: ''
+        required: 0
+        type: asset_image
+      webpage_top:
+        default: 0
+        description: メインページに表示するウェブページを指定します
+        name: メインページに表示（ウェブページ）
+        obj_type: page
+        options: ''
+        required: 0
+        type: checkbox
+    importer: custom_fields
+  field_display_options:
+    component: ~
+    data:
+      blog:
+        field:logo_images:
+          display: default
+          order: 1
+        field:main_images:
+          display: default
+          order: 0
+      page:
+        excerpt:
+          display: default
+          order: 5
+        field:footernavi_on:
+          display: default
+          order: 3
+        field:main_image_page:
+          display: default
+          order: 1
+        field:navi_on:
+          display: default
+          order: 2
+        field:webpage_top:
+          display: default
+          order: 4
+        keywords:
+          display: default
+          order: 6
+        text:
+          display: default
+          order: 0
+      post:
+        excerpt:
+          display: default
+          order: 3
+        field:entry_pickup:
+          display: default
+          order: 2
+        field:main_image_entry:
+          display: default
+          order: 1
+        keywords:
+          display: default
+          order: 4
+        text:
+          display: default
+          order: 0
+    importer: field_display_options
+  template_set:
+    component: core
+    data:
+      base_path: templates
+      templates:
+        archive:
+          category_entry_listing:
+            filename: category_entry_listing.mtml
+            label: カテゴリ別ニュース記事リスト
+            mappings:
+              category:
+                archive_type: Category
+                file_template: "%-c/%i"
+                preferred: 1
+          monthly_entry_listing:
+            filename: monthly_entry_listing.mtml
+            label: 月別ニュース記事リスト
+            mappings:
+              monthly:
+                archive_type: Monthly
+                file_template: "%y/%m/%i"
+                preferred: 1
+        index:
+          feed_recent:
+            filename: atom.xml.mtml
+            label: 最新記事のフィード
+            outfile: atom.xml
+            rebuild_me: 1
+          main_index:
+            filename: index.html.mtml
+            label: メインページ
+            outfile: index.html
+            rebuild_me: 1
+          news:
+            filename: news.html.mtml
+            label: ニュース TOP
+            outfile: news.html
+            rebuild_me: 1
+          styles:
+            filename: styles.css.mtml
+            label: スタイルシート
+            outfile: styles.css
+            rebuild_me: 1
+        individual:
+          entry:
+            filename: entry.mtml
+            label: 記事
+            mappings:
+              individual:
+                archive_type: Individual
+                file_template: "%y/%m/%-f"
+                preferred: 1
+        module:
+          config:
+            filename: config.mtml
+            label: config
+          entry-list:
+            filename: entry-list.mtml
+            label: entry-list
+          footer:
+            filename: footer.mtml
+            label: footer
+          footer-script:
+            filename: footer-script.mtml
+            label: footer-script
+          header-menu:
+            filename: header-menu.mtml
+            label: header-menu
+          header-script:
+            filename: header-script.mtml
+            label: header-script
+          information:
+            filename: information.mtml
+            label: information
+          left-menu:
+            filename: left-menu.mtml
+            label: left-menu
+          news-sidebar:
+            filename: news-sidebar.mtml
+            label: news-sidebar
+          social-button:
+            filename: social-button.mtml
+            label: social-button
+          top_pages:
+            filename: top_pages.mtml
+            label: top-pages
+          twitter:
+            filename: twitter.mtml
+            label: twitter
+          webpage_breadcrumbs:
+            filename: webpage_breadcrumbs.mtml
+            label: webpage_breadcrumbs
+          webpage_sidebar:
+            filename: webpage_sidebar.mtml
+            label: webpage-sidebar
+        page:
+          webpage:
+            filename: webpage.mtml
+            label: ウェブページ
+            mappings:
+              page:
+                archive_type: Page
+                file_template: "%-c/%-f"
+                preferred: 1
+        system:
+          404_error:
+            filename: 404_error.mtml
+            label: 404 エラー
+    importer: template_set
+
