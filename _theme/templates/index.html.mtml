@@ -106,35 +106,23 @@
                     <p class="top-newsArea__newsRelease">
                         <a href="#">一覧はこちら</a>
                     </p>
-                    <dl class="newsArea__dateList">
-                        <dt><p class="newsArea__day">2017.02.11</p><a href="news/archive.html"><p class="newsArea__category">カテゴリ</p></a></dt>
-                        <dt><p class="newsArea__title">記事タイトル</p></dt>
-                        <dd><a href="#">テキストテキスト</a>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストスト
-                            <p class="newsArea__link">
-                                <a href="#">続きを読む</a>
-                            </p>
-                        </dd>
-                    </dl>
-
-                    <dl class="newsArea__dateList">
-                        <dt><p class="newsArea__day">2017.02.11</p><a href="news/"><p class="newsArea__category">カテゴリ</p></a></dt>
-                        <dt><p class="newsArea__title">記事タイトル</p></dt>
-                        <dd><a href="#">テキストテキスト</a>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストスト
-                            <p class="newsArea__link">
-                                <a href="#">続きを読む</a>
-                            </p>
-                        </dd>
-                    </dl>
-
-                    <dl class="newsArea__dateList">
-                        <dt><p class="newsArea__day">2017.02.11</p><a href="news/"><p class="newsArea__category">カテゴリ</p></a></dt>
-                        <dt><p class="newsArea__title">記事タイトル</p></dt>
-                        <dd><a href="#">テキストテキスト</a>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストスト
-                            <p class="newsArea__link">
-                                <a href="#">続きを読む</a>
-                            </p>
-                        </dd>
-                    </dl>
+                    <mt:Entries>
+                        <dl class="newsArea__dateList">
+                            <dt>
+                                <p class="newsArea__day">2017.02.11</p>
+                                <a href="news/"><p class="newsArea__category">カテゴリ</p></a>
+                            </dt>
+                            <dt>
+                                <h3 class="newsArea__title"><$mt:EntryTitle$></h3>
+                                    </dt>
+                            <dd>
+                                <$mt:EntryExcerpt$>
+                                    <p class="newsArea__link">
+                                        <a href="<$mt:EntryPermalink$>">続きを読む</a>
+                                    </p>
+                            </dd>
+                        </dl>
+                    </mt:Entries>
                 </div>
                 <div class="top-bannerArea">
                     <ul>
