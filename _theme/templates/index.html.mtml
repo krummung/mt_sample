@@ -72,30 +72,17 @@
         <div class="top-pagesArea">
             <div class="mt-container">
                 <ul class="top-pagesArea__thumbnailList">
-                    <li>
-                        <a href="#">
-                            <div class="top-pages__item">
-                                <h2 class="item__title">ページ1</h2>
-                                <img src="/images/img_01.png">
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="top-pages__item">
-                                <h2 class="item__title">ページ2</h2>
-                                <img src="/images/img_02.png">
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="top-pages__item">
-                                <h2 class="item__title">ページ3</h2>
-                                <img src="/images/img_03.png">
-                            </div>
-                        </a>
-                    </li>
+                    <mt:Pages limit="3">
+                        <li>
+                            <a href="<$mt:PagePermalink$>">
+                                <div class="top-pages__item">
+                                    <h2 class="item__title">
+                                        <$mt:PageTitle$>
+                                    </h2>
+                                </div>
+                            </a>
+                        </li>
+                    </mt:Pages>
                 </ul>
             </div>
         </div>
