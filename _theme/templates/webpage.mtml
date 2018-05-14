@@ -1,60 +1,97 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head prefix="og: //ogp.me/ns# fb: //ogp.me/ns/fb# website: //ogp.me/ns/website#">
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>サンプルテーマ</title>
-<!-- Optional theme -->
-<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
-<link href="/css/styles.css" rel="stylesheet">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
 
+<head prefix="og: //ogp.me/ns# fb: //ogp.me/ns/fb# website: //ogp.me/ns/website#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>サンプルテーマ</title>
+    <!-- Optional theme -->
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link href="<$mt:BlogRelativeURL$>styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
 </head>
+
 <body>
-  <header>
-    <div class="mt-container">
-      <h1 class="mt-h1">
-      Thema Sample
-      </h1>
-      <ul class="navi-list">
-        <li><a href="/">トップ</a></li>
-        <li><a href="/news/">ニュース</a></li>
-        <li><a href="/pages/" class="current">ページ</a></li>
-        <li><a href="/pages/">ページ</a></li>
-        <li><a href="/pages/">ページ</a></li>
-      </ul>
-    </div>
-  </header>
-  
-  <section class="UL-mainImage">
-    <div class="mt-container">
-      <h2 class="UL-mainImage__title"><i class="fa fa-file-text-o"></i>ページ</h2>
-    </div>
-  </section>
-  <main class="pages-wrap">
-    <div class="mt-container">
-      <h3 class="pages__title">タイトルタイトルタイトルタイトルタイトルタイトル</h3>
-      <div class="pages-textArea">
-      <p><strong>テキストテキストテキストテ</strong>キストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-      
-      <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス<strong>テキストテキストテキストテ</strong>トテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-      <img src="//placehold.jp/400x240.png">
-      </div>
-    </div>
-  </main>
-  <aside class="bread-list">
-      <div class="mt-container">
-        <ul>
-          <li><a href="#">ページ</a></li>
-          <li><a href="#">ページ</a></li>
-        </ul>
-      </div>
-  </aside>
-  <footer class="footerArea">
-    <div class="mt-container">
-      <p class="footerArea_logo">rogorogorogorogorogorogo</p>
-    </div>
-  </footer>
+    <header>
+        <div class="mt-container">
+            <a href="<$mt:BlogURL$>">
+                <h1 class="mt-h1">
+                    <$mt:BlogName$>
+                </h1>
+            </a>
+            <mt:Pages>
+                <ul class="navi-list clearfix">
+                    <mt:TopLevelFolders>
+                        <li>
+                            <a href="#">
+                                <$mt:FolderLabel$>
+                            </a>
+                            <ul class="navi-list__sub">
+                                <mt:Pages>
+                                    <li>
+                                        <a href="<$mt:PagePermalink$>">
+                                            <$mt:PageTitle$>
+                                        </a>
+                                    </li>
+                                </mt:Pages>
+                                <mt:SubFolders>
+                                    <li class="navi-list__sub--title">
+                                        <$mt:FolderLabel$>
+                                    </li>
+                                    <mt:Pages>
+                                        <li>
+                                            <a href="<$mt:PagePermalink$>">
+                                                <$mt:PageTitle$>
+                                            </a>
+                                        </li>
+                                    </mt:Pages>
+                                    <$mt:SubFolderRecurse$>
+                                </mt:SubFolders>
+                            </ul>
+                        </li>
+                    </mt:TopLevelFolders>
+                    <mt:Pages no_folder="1">
+                        <li>
+                            <a href="<$mt:PagePermalink$>">
+                                <$mt:PageTitle$>
+                            </a>
+                        </li>
+                    </mt:Pages>
+                </ul>
+            </mt:Pages>
+        </div>
+    </header>
+
+    <section class="UL-mainImage">
+        <div class="mt-container">
+            <h2 class="UL-mainImage__title"><i class="fa fa-file-text-o"></i>ページ</h2>
+        </div>
+    </section>
+    <main class="pages-wrap">
+        <div class="mt-container">
+            <h3 class="pages__title">タイトルタイトルタイトルタイトルタイトルタイトル</h3>
+            <div class="pages-textArea">
+                <p><strong>テキストテキストテキストテ</strong>キストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+
+                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス<strong>テキストテキストテキストテ</strong>トテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                <img src="//placehold.jp/400x240.png">
+            </div>
+        </div>
+    </main>
+    <aside class="bread-list">
+        <div class="mt-container">
+            <ul>
+                <li><a href="#">ページ</a></li>
+                <li><a href="#">ページ</a></li>
+            </ul>
+        </div>
+    </aside>
+    <footer class="footerArea">
+        <div class="mt-container">
+            <p class="footerArea_logo">rogorogorogorogorogorogo</p>
+        </div>
+    </footer>
 </body>
+
 </html>
