@@ -21,30 +21,43 @@
                 </h1>
             </a>
             <mt:Pages>
-                <ul class="navi-list__sub">
-                    <mt:Pages>
+                <ul class="navi-list clearfix">
+                    <mt:TopLevelFolders>
+                        <li>
+                            <a href="#">
+                                <$mt:FolderLabel$>
+                            </a>
+                            <ul class="navi-list__sub">
+                                <mt:Pages>
+                                    <li>
+                                        <a href="<$mt:PagePermalink$>">
+                                            <$mt:PageTitle$>
+                                        </a>
+                                    </li>
+                                </mt:Pages>
+                                <mt:SubFolders>
+                                    <li class="navi-list__sub--title">
+                                        <$mt:FolderLabel$>
+                                    </li>
+                                    <mt:Pages>
+                                        <li>
+                                            <a href="<$mt:PagePermalink$>">
+                                                <$mt:PageTitle$>
+                                            </a>
+                                        </li>
+                                    </mt:Pages>
+                                    <$mt:SubFolderRecurse$>
+                                </mt:SubFolders>
+                            </ul>
+                        </li>
+                    </mt:TopLevelFolders>
+                    <mt:Pages no_folder="1">
                         <li>
                             <a href="<$mt:PagePermalink$>">
                                 <$mt:PageTitle$>
                             </a>
                         </li>
                     </mt:Pages>
-                    <mt:SubFolders>
-                        <li class="navi-list__sub--title">
-                            <$mt:FolderLabel$>
-                        </li>
-                        <mt:Pages>
-                            <li>
-                                <a href="<$mt:PagePermalink$>">
-                                    <$mt:PageTitle$>
-                                </a>
-                            </li>
-                        </mt:Pages>
-                        <$mt:SubFolderRecurse$>
-                    </mt:SubFolders>
-                </ul>
-                </li>
-                </mt:TopLevelFolders>
                 </ul>
             </mt:Pages>
         </div>
