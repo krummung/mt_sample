@@ -13,89 +13,41 @@
 </head>
 
 <body>
-    <header>
-        <div class="mt-container">
-            <a href="<$mt:BlogURL$>">
-                <h1 class="mt-h1">
-                    <img src="<$mt:BlogRelativeURL$>images/logo.png" alt="<$mt:BlogName$>">
-                </h1>
-            </a>
-            <mt:Pages>
-                <ul class="navi-list clearfix">
-                    <mt:TopLevelFolders>
-                        <li>
-                            <a href="#">
-                                <$mt:FolderLabel$>
-                            </a>
-                            <ul class="navi-list__sub">
-                                <mt:Pages>
-                                    <li>
-                                        <a href="<$mt:PagePermalink$>">
-                                            <$mt:PageTitle$>
-                                        </a>
-                                    </li>
-                                </mt:Pages>
-                                <mt:SubFolders>
-                                    <li class="navi-list__sub--title">
-                                        <$mt:FolderLabel$>
-                                    </li>
-                                    <mt:Pages>
-                                        <li>
-                                            <a href="<$mt:PagePermalink$>">
-                                                <$mt:PageTitle$>
-                                            </a>
-                                        </li>
-                                    </mt:Pages>
-                                    <$mt:SubFolderRecurse$>
-                                </mt:SubFolders>
-                            </ul>
-                        </li>
-                    </mt:TopLevelFolders>
-                    <mt:Pages no_folder="1">
-                        <li>
-                            <a href="<$mt:PagePermalink$>">
-                                <$mt:PageTitle$>
-                            </a>
-                        </li>
-                    </mt:Pages>
-                </ul>
-            </mt:Pages>
-        </div>
-    </header>
+    <$mt:Include module="header"$>
 
-    <section class="mainImage">
-        <div class="mt-container">
-            <img src="<$mt:BlogRelativeURL$>images/black-and-white-city-skyline-buildings.jpg" class="mainImage__img">
-        </div>
-    </section>
-    <main>
-        <div class="top-pagesArea">
+        <section class="mainImage">
             <div class="mt-container">
-                <ul class="top-pagesArea__thumbnailList">
-                    <mt:Pages limit="3">
-                        <li>
-                            <a href="<$mt:PagePermalink$>">
-                                <div class="top-pages__item">
-                                    <h2 class="item__title">
-                                        <$mt:PageTitle$>
-                                    </h2>
-                                </div>
-                            </a>
-                        </li>
-                    </mt:Pages>
-                </ul>
+                <img src="<$mt:BlogRelativeURL$>images/black-and-white-city-skyline-buildings.jpg" class="mainImage__img">
             </div>
-        </div>
-        <div class="mt-container">
-            <div class="top-columnWrap">
-                <div class="top-newsArea">
-                    <h2 class="top-newsArea__title"><i class="fa fa-feed"></i>ニュース</h2>
-                    <p class="top-newsArea__newsRelease">
-                        <a href="<$mt:BlogRelativeURL$>news.html">一覧はこちら</a>
-                    </p>
-                    <mt:Entries limit="3">
-                        <dl class="newsArea__dateList">
-                            <dt>
+        </section>
+        <main>
+            <div class="top-pagesArea">
+                <div class="mt-container">
+                    <ul class="top-pagesArea__thumbnailList">
+                        <mt:Pages limit="3">
+                            <li>
+                                <a href="<$mt:PagePermalink$>">
+                                    <div class="top-pages__item">
+                                        <h2 class="item__title">
+                                            <$mt:PageTitle$>
+                                        </h2>
+                                    </div>
+                                </a>
+                            </li>
+                        </mt:Pages>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-container">
+                <div class="top-columnWrap">
+                    <div class="top-newsArea">
+                        <h2 class="top-newsArea__title"><i class="fa fa-feed"></i>ニュース</h2>
+                        <p class="top-newsArea__newsRelease">
+                            <a href="<$mt:BlogRelativeURL$>news.html">一覧はこちら</a>
+                        </p>
+                        <mt:Entries limit="3">
+                            <dl class="newsArea__dateList">
+                                <dt>
                                 <p class="newsArea__day">
                                     <$mt:Date format="%Y.%m.%d"$>
                                         </p>
@@ -105,45 +57,47 @@
                                         </a>
                                     </mt:EntryCategories>
                             </dt>
-                            <dt>
+                                <dt>
                                 <h3 class="newsArea__title"><$mt:EntryTitle$></h3>
                                     </dt>
-                            <dd>
-                                <$mt:EntryExcerpt words="20" $>
-                                    <p class="newsArea__link">
-                                        <a href="<$mt:EntryPermalink$>">続きを読む</a>
-                                    </p>
-                            </dd>
-                        </dl>
-                    </mt:Entries>
-                </div>
-                <div class="top-bannerArea">
-                    <ul>
-                        <li>
-                            <a href="リンク先アドレス">
+                                <dd>
+                                    <$mt:EntryExcerpt words="20" $>
+                                        <p class="newsArea__link">
+                                            <a href="<$mt:EntryPermalink$>">続きを読む</a>
+                                        </p>
+                                </dd>
+                            </dl>
+                        </mt:Entries>
+                    </div>
+                    <div class="top-bannerArea">
+                        <ul>
+                            <li>
+                                <a href="リンク先アドレス">
                                 <img src="<$mt:BlogRelativeURL$>images/banner_big.png">
                             </a>
-                        </li>
-                        <li>
-                            <a href="リンク先アドレス">
+                            </li>
+                            <li>
+                                <a href="リンク先アドレス">
                                 <img src="<$mt:BlogRelativeURL$>images/banner_small.png">
                             </a>
-                        </li>
-                        <li>
-                            <a href="リンク先アドレス">
+                            </li>
+                            <li>
+                                <a href="リンク先アドレス">
                                 <img src="<$mt:BlogRelativeURL$>images/banner_small.png">
                             </a>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
-    <footer class="footerArea">
-        <div class="mt-container">
-            <p class="footerArea_logo"><$mt:BlogName$></p>
-        </div>
-    </footer>
+        </main>
+        <footer class="footerArea">
+            <div class="mt-container">
+                <p class="footerArea_logo">
+                    <$mt:BlogName$>
+                </p>
+            </div>
+        </footer>
 </body>
 
 </html>
