@@ -109,14 +109,20 @@
                     <mt:Entries limit="3">
                         <dl class="newsArea__dateList">
                             <dt>
-                                <p class="newsArea__day">2017.02.11</p>
-                                <a href="news/"><p class="newsArea__category">カテゴリ</p></a>
+                                <p class="newsArea__day">
+                                    <$mt:Date format="%Y.%m.%d"$>
+                                        </p>
+                                    <mt:EntryCategories type="primary">
+                                        <a href="<$mt:CategoryArchiveLink$>" class="category">
+                                            <p class="newsArea__category"><$mt:CategoryLabel encode_html="1"$></p>
+                                        </a>
+                                    </mt:EntryCategories>
                             </dt>
                             <dt>
                                 <h3 class="newsArea__title"><$mt:EntryTitle$></h3>
                                     </dt>
                             <dd>
-                                <$mt:EntryExcerpt$>
+                                <$mt:EntryExcerpt words="20" $>
                                     <p class="newsArea__link">
                                         <a href="<$mt:EntryPermalink$>">続きを読む</a>
                                     </p>
