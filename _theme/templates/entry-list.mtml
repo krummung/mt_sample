@@ -21,6 +21,18 @@
             <img src="<mt:CustomFieldAsset identifier="main_image_entry">
                 <$mt:AssetThumbnailURL$>
             </mt:CustomFieldAsset>">
+
+            <img src="<mt:If tag="CustomFieldValue" identifier="main_image_entry">
+                <mt:CustomFieldAsset identifier="main_image_entry">
+                <$mt:AssetThumbnailURL$>
+            </mt:CustomFieldAsset>
+            <mt:Else>
+            <mt:EntryAssets type="image" sort_order="ascend" limit="1">
+              <$mt:AssetThumbnailURL$>
+            <mt:Else>
+              <$mt:BlogRelativeURL$>images/noimage.png</mt:EntryAssets>
+            </mt:If>
+            " alt="<$mt:EntryTitle$>">
         </dd>
     </dl>
 
