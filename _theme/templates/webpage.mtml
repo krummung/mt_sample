@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <$mt:Include module="header-menu" $>
+    <$mt:Include module="header-menu"$>
 
         <section class="UL-mainImage">
             <div class="mt-container">
@@ -38,25 +38,12 @@
         <aside class="bread-list">
             <div class="mt-container">
                 <ul>
-                    <li><a href="<$mt:BlogRelativeURL$>">トップ</a></li>
-                    <mt:ParentFolders>
-                        <li>
-                            <mt:Pages sort_order="ascend" field:folder_top="1">
-                                <a href="<$mt:PagePermalink$>">
-                                    <$mt:FolderLabel encode_html="1" $>
-                                </a>
-                                <mt:Else>
-                                    <$mt:FolderLabel encode_html="1" $>
-                            </mt:Pages>
-                        </li>
-                    </mt:ParentFolders>
-                    <li>
-                        <$mt:PageTitle encode_html="1" $>
-                    </li>
+                    <li><a href="#">ページ</a></li>
+                    <li><a href="#">ページ</a></li>
                 </ul>
             </div>
         </aside>
-        <$mt:Include module="footer" $>
+        <$mt:Include module="footer"$>
 </body>
 
 </html>
