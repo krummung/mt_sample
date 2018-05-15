@@ -25,27 +25,27 @@
             <div class="mt-container">
                 <div class="news-columnWrap">
                     <div class="news-newsArea">
-
-                        <mt:Entries limit="3">
-                            <dl class="newsArea__dateList">
+                        <mt:Entries limit="5">
+                            <dl class="newsArea__dateList clearfix">
                                 <dt>
-                        <p class="newsArea__day">
-                            <$mt:Date format="%Y.%m.%d"$>
-                                </p>
-                            <mt:EntryCategories type="primary">
-                                <a href="<$mt:CategoryArchiveLink$>" class="category">
-                                    <p class="newsArea__category"><$mt:CategoryLabel encode_html="1"$></p>
-                                </a>
-                            </mt:EntryCategories>
-                    </dt>
-                                <dt>
-                        <h3 class="newsArea__title"><$mt:EntryTitle$></h3>
-                            </dt>
-                                <dd>
+                                    <p class="newsArea__day">
+                                        <$mt:Date format="%Y.%m.%d"$>
+                                            </p>
+                                    <p class="newsArea__category">
+                                        <$mt:CategoryLabel$>
+                                            </p>
+                                    <h4 class="newsArea__title">
+                                        <$mt:EntryTitle$>
+                                            </h4>
+                                        </dt>
+                                <dd class="newsArea__text">
                                     <$mt:EntryExcerpt words="20" $>
                                         <p class="newsArea__link">
                                             <a href="<$mt:EntryPermalink$>">続きを読む</a>
                                         </p>
+                                </dd>
+                                <dd class="newsArea__img">
+                                    <img src="<$mt:BlogRelativeURL$>images/noimage.png">
                                 </dd>
                             </dl>
                         </mt:Entries>
