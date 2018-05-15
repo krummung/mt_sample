@@ -1,5 +1,5 @@
 <$mt:Include module="config"$>
-    <mt:Entries paginate_by="<$mt:Var name="paginate"$>">
+<mt:Entries paginate_by="3">
     <dl class="newsArea__dateList clearfix">
         <dt>
             <p class="newsArea__day">
@@ -36,12 +36,12 @@
         <ul class="newsArea__nextArea clearfix">
             <mt:PaginationHasPrevious>
                 <li class="newsArea__nextArea--prev">
-                    <a href="<$mt:PaginationPreviousURL$>"><i>◀︎</i>前の件</a>
+                    <a href="<$mt:PaginationPreviousURL$>"><i>◀︎</i>前の<$mt:Var name="paginate"$>件</a>
                 </li>
             </mt:PaginationHasPrevious>
             <mt:PaginationHasNext>
                 <li class="newsArea__nextArea--next">
-                    <a href="<$mt:PaginationNextURL$>">次の3件<i>▶︎</i></a>
+                    <a href="<$mt:PaginationNextURL$>">次の<$mt:Var name="paginate"$>件<i>▶︎</i></a>
                 </li>
             </mt:PaginationHasNext>
         </ul>
