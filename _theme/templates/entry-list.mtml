@@ -16,9 +16,11 @@
                 <p class="newsArea__link">
                     <a href="<$mt:EntryPermalink$>">続きを読む</a>
                 </p>
-                </dd>
+        </dd>
         <dd class="newsArea__img">
-            <img src="<$mt:BlogRelativeURL$>images/noimage.png">
+            <img src="<mt:CustomFieldAsset identifier="news_image">
+                <$mt:AssetThumbnailURL$>
+            </mt:CustomFieldAsset>">
         </dd>
     </dl>
 
