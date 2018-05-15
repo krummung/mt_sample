@@ -79,37 +79,7 @@
                         </ul>
                     </div>
 
-                    <div class="news-sideArea">
-                        <mt:ArchiveList archive_type="Category">
-                            <mt:ArchiveListHeader>
-                                <h3 class="sideArea__title">カテゴリ</h3>
-                                <ul class="sideArea__list">
-                            </mt:ArchiveListHeader>
-                            <li>
-                                <a href="<$mt:CategoryArchiveLink$>">
-                                    <mt:ArchiveTitle>（<$mt:CategoryCount$>)
-                                </a>
-                            </li>
-                            <mt:ArchiveListFooter>
-                                </ul>
-                            </mt:ArchiveListFooter>
-                        </mt:ArchiveList>
-
-                        <mt:ArchiveList archive_type="Monthly">
-                            <mt:ArchiveListHeader>
-                                <h3 class="sideArea__title">カテゴリ</h3>
-                                <ul class="sideArea__list">
-                            </mt:ArchiveListHeader>
-                            <li>
-                                <a href="<$mt:CategoryArchiveLink$>">
-                                    <mt:ArchiveTitle>（<$mt:CategoryCount$>)
-                                </a>
-                            </li>
-                            <mt:ArchiveListFooter>
-                                </ul>
-                            </mt:ArchiveListFooter>
-                        </mt:ArchiveList>
-                    </div>
+                        <$mt:Include module="news-sidebar"$>
 
                 </div>
             </div>

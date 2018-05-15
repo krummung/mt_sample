@@ -1,39 +1,34 @@
-<div class="sidebar">
-<div class="group">
-  <h2><i class="fa fa-chevron-right"></i> カテゴリ</h2>
-  <ul>
-      <mt:TopLevelCategories>
-      <mt:If tag="CategoryCount">
-      <li><a href="<$mt:CategoryArchiveLink$>"><$mt:CategoryLabel encode_html="1"$>(<$mt:ArchiveCount$>)</a>
-      <mt:Else>
-      <li><span class="nolink"><$mt:CategoryLabel encode_html="1"$></span>
-      </mt:If>
-      <mt:SubCategories>
-      <mt:SubCatIsFirst><ul class="submenu"></mt:SubCatIsFirst>
-      <mt:If tag="CategoryCount">
-      <li class="catdepth-<$mt:CategoryDepth$>"><a href="<$mt:CategoryArchiveLink$>"><$mt:CategoryLabel encode_html="1"$>(<$mt:ArchiveCount$>)</a>
-      <mt:Else>
-      <li class="catdepth-<$mt:CategoryDepth$>"><span class="nolink"><$mt:CategoryLabel encode_html="1"$></span>
-      </mt:If>
-      <$mt:SubCatsRecurse$></li>
-      <mt:SubCatIsLast></ul></mt:SubCatIsLast>
-      </mt:SubCategories>
-      </li>
-      </mt:TopLevelCategories>
-  </ul>
-</div>
-<div class="group">
-<mt:ArchiveList archive_type="Monthly">
-  <mt:ArchiveListHeader>
-    <h2><i class="fa fa-chevron-right"></i> 月別アーカイブ</h2>
-    <ul>
-  </mt:ArchiveListHeader>
-      <li><a href='<$mt:ArchiveLink encode_html="1"$>'><$mt:ArchiveTitle$> (<$mt:ArchiveCount$>)</a></li>
-  <mt:ArchiveListFooter>
-    </ul>
-  </mt:ArchiveListFooter>
-</mt:ArchiveList>
-</div>
+<div class="news-sideArea">
+    <mt:ArchiveList archive_type="Category">
+        <mt:ArchiveListHeader>
+            <h3 class="sideArea__title">カテゴリ</h3>
+            <ul class="sideArea__list">
+        </mt:ArchiveListHeader>
+        <li>
+            <a href="<$mt:CategoryArchiveLink$>">
+                <mt:ArchiveTitle>（
+                    <$mt:CategoryCount$>)
+            </a>
+        </li>
+        <mt:ArchiveListFooter>
+            </ul>
+        </mt:ArchiveListFooter>
+    </mt:ArchiveList>
 
-<$mt:Include module="information"$>
+    <mt:ArchiveList archive_type="Monthly">
+        <mt:ArchiveListHeader>
+            <h3 class="sideArea__title">カテゴリ</h3>
+            <ul class="sideArea__list">
+        </mt:ArchiveListHeader>
+        <li>
+            <a href="<$mt:CategoryArchiveLink$>">
+                <mt:ArchiveTitle>（
+                    <$mt:CategoryCount$>)
+            </a>
+        </li>
+        <mt:ArchiveListFooter>
+            </ul>
+        </mt:ArchiveListFooter>
+    </mt:ArchiveList>
+
 </div>
