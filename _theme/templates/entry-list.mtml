@@ -18,13 +18,8 @@
                 </p>
         </dd>
         <dd class="newsArea__img">
-            <img src="<mt:CustomFieldAsset identifier="main_image_entry">
-                <$mt:AssetThumbnailURL$>
-            </mt:CustomFieldAsset>">
-
             <img src="<mt:If tag="CustomFieldValue" identifier="main_image_entry">
-                <mt:CustomFieldAsset identifier="main_image_entry">
-                <$mt:AssetThumbnailURL$>
+            <mt:CustomFieldAsset identifier="main_image_entry"><$mt:AssetThumbnailURL$>
             </mt:CustomFieldAsset>
             <mt:Else>
             <mt:EntryAssets type="image" sort_order="ascend" limit="1">
