@@ -1,5 +1,4 @@
-<$mt:Include module="config"$>
-    <mt:Entries paginate_by="$paginate">
+<mt:Entries paginate_by="$paginate">
     <dl class="newsArea__dateList clearfix">
         <dt>
             <p class="newsArea__day">
@@ -19,11 +18,11 @@
                 </p>
         </dd>
         <dd class="newsArea__img">
-            <img src="<mt:If tag="CustomFieldValue" identifier="main_image_entry">
-            <mt:CustomFieldAsset identifier="main_image_entry"><$mt:AssetThumbnailURL$>
+            <img src="<mt:If tag=" CustomFieldValue " identifier="main_image_entry ">
+            <mt:CustomFieldAsset identifier="main_image_entry "><$mt:AssetThumbnailURL$>
             </mt:CustomFieldAsset>
             <mt:Else>
-            <mt:EntryAssets type="image" sort_order="ascend" limit="1">
+            <mt:EntryAssets type="image " sort_order="ascend " limit="1 ">
               <$mt:AssetThumbnailURL$>
             <mt:Else>
               <$mt:BlogRelativeURL$>images/noimage.png</mt:EntryAssets>
