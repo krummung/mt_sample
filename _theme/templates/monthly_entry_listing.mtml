@@ -7,25 +7,12 @@
 <title>サンプルテーマ − ニュース一覧</title>
 <!-- Optional theme -->
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
-<link href="/css/styles.css" rel="stylesheet">
+    <link href="<$mt:BlogRelativeURL$>styles.css" rel="stylesheet">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
 
 </head>
 <body>
-  <header>
-    <div class="mt-container">
-      <h1 class="mt-h1">
-      Thema Sample
-      </h1>
-      <ul class="navi-list">
-        <li><a href="/">トップ</a></li>
-        <li><a href="/news/" class="current">ニュース</a></li>
-        <li><a href="/pages/">ページ</a></li>
-        <li><a href="/pages/">ページ</a></li>
-        <li><a href="/pages/">ページ</a></li>
-      </ul>
-    </div>
-  </header>
+    <$mt:Include module="header-menu"$>
   
   <section class="UL-mainImage">
     <div class="mt-container">
@@ -36,7 +23,7 @@
     <div class="mt-container">
       <div class="news-columnWrap">
         <div class="news-newsArea">
-            <h3 class="newsArea__categoryName"><$mt:ArchiveTitle$></h3>        
+            <h3 class="newsArea__categoryName"><$mt:ArchiveTitle$></h3>    
           <dl class="newsArea__dateList clearfix">
             <dt>
               <p class="newsArea__day">2017.02.11</p><a href="news/"><p class="newsArea__category">カテゴリ</p></a>
@@ -114,10 +101,6 @@
       </div>
     </div>
   </main>
-  <footer class="footerArea">
-    <div class="mt-container">
-      <p class="footerArea_logo">rogorogorogorogorogorogo</p>
-    </div>
-  </footer>
+      <$mt:Include module="footer"$>
 </body>
 </html>
